@@ -124,7 +124,7 @@ public class TreeCommandExecutor implements CommandExecutor {
         System.arraycopy(args, i, cmdArgs, 0, cmdArgs.length);
 
         if(cmdArgs.length < selectedLeaf.executable.getNumRequiredArgs()) {
-            sender.sendMessage(selectedLeaf.executable.getMissingRequiredArgsHelpMessage());
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', selectedLeaf.executable.getMissingRequiredArgsHelpMessage()));
             return true;
         }
         try {
